@@ -10,21 +10,19 @@ while numberOfGames != 5:
     Tied    ---> +1 points
     Lose    ---> +0 points
     Enter the team point in this match: """)
-    type(game)
-    match game:
-        case "3":
-            rezvanWins += 1
-            rezvanPoints += 3
-        case "1":
-            rezvanTied += 1
-            rezvanPoints += 1
-        case "0":
-            rezvanLosses += 1
-        case _:
-            print("Invalid input.")
-            numberOfGames -= 1
+    if game == "3":
+        rezvanWins += 1
+        rezvanPoints += 3
+    elif game == "1":
+        rezvanTied += 1
+        rezvanPoints += 1
+    elif game == "0":
+        rezvanLosses += 1
+    else:
+        print("Invalid input.")
+        numberOfGames -= 1
     numberOfGames += 1
-print(f'Number of team wins = {rezvanWins}')
-print(f'Number of team losses = {rezvanLosses}')
-print(f'Number of team tied games = {rezvanTied}')
-print(f'Points of team = {rezvanPoints}')
+print(f'Number of rezvan team wins = {rezvanWins}')
+print(f'Number of rezvan team losses = {rezvanLosses}')
+print(f'Number of rezvan team tied games = {rezvanTied}')
+print(f'Points of rezvan team = {rezvanPoints}')

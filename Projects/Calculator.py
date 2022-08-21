@@ -45,10 +45,13 @@ Select what you want:
         elif computingAction == "4" or computingAction == "Division" or computingAction == "division":
             firstNumber = float(input("Enter the first number: "))
             secondNumber = float(input("Enter the second number: "))
-            if firstNumber % 1 == 0 and secondNumber % 1 == 0:
-                firstNumber = int(firstNumber)
-                secondNumber = int(secondNumber)
-            result = '{} // {} = {}'.format(firstNumber, secondNumber, firstNumber // secondNumber)
+            if secondNumber == 0:
+                result ="Division by zero."
+            else:
+                if firstNumber % 1 == 0 and secondNumber % 1 == 0:
+                    firstNumber = int(firstNumber)
+                    secondNumber = int(secondNumber)
+                result = '{} // {} = {}'.format(firstNumber, secondNumber, firstNumber // secondNumber)
         elif computingAction == "5" or computingAction == "Remainder" or computingAction == "remainder":
             firstNumber = float(input("Enter the first number: "))
             secondNumber = float(input("Enter the second number: "))

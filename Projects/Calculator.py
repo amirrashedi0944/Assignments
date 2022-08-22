@@ -61,14 +61,24 @@ Select what you want:
             result = '{} % {} = {}'.format(firstNumber, secondNumber, firstNumber % secondNumber)
         elif computingAction == "6" or computingAction == "Power 2" or computingAction == "power 2":
             number = float(input("Enter the number: "))
+            if number % 1 == 0:
+                number = int(number)
             result = 'The second power of {} is {}'.format(number, number ** 2)
         elif computingAction == "7":
             number = float(input("Enter the number: "))
             power = float(input("Enter the power: "))
+            if number % 1 == 0 and power % 1 == 0:
+                number = int(number)
+                power = int(power)
             result = '{} to the power of {} is {}'.format(number, power, number ** power)
         elif computingAction == "8" or computingAction == "Radical" or computingAction == "radical":
             number = float(input("Enter the number:"))
-            result = 'The square root of {} is equal to {}'.format(number, mpmath.sqrt(number))
+            if number < 0:
+                result = "The sub-radical must be a number greater than or equal to zero."
+            else:
+                if number % 1 == 0:
+                    number = int(number)
+                result = 'The square root of {} is equal to {}'.format(number, mpmath.sqrt(number))
         elif computingAction == "9" or computingAction == "Back" or computingAction == "back":
             continue
         else:

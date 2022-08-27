@@ -6,7 +6,7 @@ while True:
     sumOfNumbers += number
     print(f'{counter:<1} throw of the dice: {number:>2}')
     counter += 1
-    if number == 6:
+    if number != 6:
         break
 print(f'Sum of numbers equals to {sumOfNumbers}.')
 

@@ -1,6 +1,6 @@
 import turtle
 raphael = turtle.Turtle()
-raphael.speed(10)
+raphael.speed(0)
 for i in range(360):
     raphael.forward(100)
     raphael.left(90)

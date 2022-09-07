@@ -5,9 +5,19 @@ for i in range(1, 11):
     if number % 1 == 0:
         number = int(number)
     numbers_list.append(number)
+temp_list = numbers_list[:]
+sorted_list = []
+reverse_sorted_list = []
+for j in range(len(numbers_list)):
+    number = min(temp_list)
+    sorted_list.append(number)
+    temp_list.remove(number)
+temp_list = numbers_list[:]
+for j in range(len(numbers_list)):
+    number = max(temp_list)
+    reverse_sorted_list.append(number)
+    temp_list.remove(number)
 print(numbers_list)
-sorted_list = sorted(numbers_list)
-reverse_sorted_list = sorted(numbers_list, reverse=True)
 while True:
     for item in numbers_list:
         count = numbers_list.count(item)
